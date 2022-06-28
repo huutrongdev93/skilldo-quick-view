@@ -14,7 +14,7 @@ if(Language::default() != Language::current()) {
             <span class="button_view"><?php echo __(html_entity_decode($config['txt_view']));?></span>
         </a>
     <?php } else { ?>
-        <a href="<?php echo Url::permalink($item->slug);?>" class="btn-view wcmc_add_to_cart" data-id="<?php echo $item->id;?>">
+        <a href="<?php echo Url::permalink($item->slug);?>" class="btn-view product_add_to_cart" data-id="<?php echo $item->id;?>">
             <span class="button_view"><?php echo __(html_entity_decode($config['txt_buy']));?></span>
         </a>
     <?php } ?>

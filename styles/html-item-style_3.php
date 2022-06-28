@@ -16,7 +16,7 @@ if(Language::default() != Language::current()) {
             <span><?php echo __($config['txt_view']);?></span>
         </a>
     <?php } else { ?>
-        <a href="<?php echo Url::permalink($item->slug);?>" class="btn-view wcmc_add_to_cart" data-id="<?php echo $item->id;?>">
+        <a href="<?php echo Url::permalink($item->slug);?>" class="btn-view product_add_to_cart" data-id="<?php echo $item->id;?>">
             <i class="far fa-shopping-cart"></i>
             <span><?php echo __($config['txt_buy']);?></span>
         </a>

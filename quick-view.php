@@ -5,7 +5,7 @@ Plugin class    : quick_view
 Plugin uri      : http://sikido.vn
 Description     : Plugin cho khách hàng xem nhanh thông tin sản phẩm.
 Author          : Nguyễn Hữu Trọng
-Version         : 1.1.0
+Version         : 1.1.1
 */
 const QV_NAME = 'quick-view';
 
