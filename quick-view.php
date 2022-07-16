@@ -102,7 +102,7 @@ include 'admin/quick-view-admin.php';
 
 function quickview_ajax_product_load( $ci, $model ) {
 
-    $id = (int)InputBuilder::get('id');
+    $id = (int)Request::get('id');
 
     $object = Product::get( $id );
 

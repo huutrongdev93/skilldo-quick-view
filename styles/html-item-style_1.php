@@ -9,7 +9,7 @@ if(Language::default() != Language::current()) {
     <a href="#" class="btn-quickview" data-id="<?php echo $item->id;?>">
         <span class="button_quickview"><?php echo __(html_entity_decode($config['txt_quickview']));?></span>
     </a>
-    <?php if(Product::count(['where' => array('parent_id' => $item->id, 'type' => 'variations')]) != 0) { ?>
+    <?php if(Product::count(Qr::set('parent_id', $item->id)->where('type', 'variations')) != 0) { ?>
         <a href="<?php echo Url::permalink($item->slug);?>" class="btn-view" data-id="<?php echo $item->id;?>">
             <span class="button_view"><?php echo __(html_entity_decode($config['txt_view']));?></span>
         </a>

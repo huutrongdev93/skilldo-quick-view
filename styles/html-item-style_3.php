@@ -10,7 +10,7 @@ if(Language::default() != Language::current()) {
         <i class="far fa-eye"></i>
         <span><?php echo __($config['txt_quickview']);?></span>
     </a>
-    <?php if(Product::count(['where' => array('parent_id' => $item->id, 'type' => 'variations')]) != 0) { ?>
+    <?php if(Product::count(Qr::set('parent_id', $item->id)->where('type', 'variations')) != 0) { ?>
         <a href="<?php echo Url::permalink($item->slug);?>" class="btn-view">
             <i class="far fa-link"></i>
             <span><?php echo __($config['txt_view']);?></span>

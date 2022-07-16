@@ -21,9 +21,9 @@ if(!function_exists('admin_quick_view_ajax_object_save')) {
 
         $result['message'] 	= 'Lưu dữ liệu không thành công!';
 
-        if(InputBuilder::post()) {
-            $data   = InputBuilder::post();
-            $active = InputBuilder::Post('style');
+        if(Request::post()) {
+            $data   = Request::post();
+            $active = Request::Post('style');
             unset($data['action']);
             unset($data['post_type']);
             unset($data['cate_type']);
