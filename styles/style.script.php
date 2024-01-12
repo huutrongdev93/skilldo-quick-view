@@ -9,9 +9,10 @@
                 }
             });
             $.fancybox.open({
-                src  : base + '/ajax?action=quickview_ajax_product_load&id=' + pid,
+                src  : base + '/ajax?action=QuickViewRender&id=' + pid,
                 type : 'ajax',
                 opts : {
+					touch: false,
                     onComplete : function () {
                         console.log(pid);
                     }

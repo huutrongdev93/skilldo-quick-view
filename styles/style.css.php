@@ -170,8 +170,8 @@
     }
 
     .fancybox-slide--ajax .products-detail {
-        max-width  : 80%;
-        max-height : 80%;
+        max-width  : 1200px;
+        max-height : 90%;
         margin: auto;
     }
     .fancybox-slide--ajax .row {
@@ -180,5 +180,10 @@
         margin-top: calc(-1 * var(--bs-gutter-y));
         margin-right: calc(-.5 * var(--bs-gutter-x));
         margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+    @media(max-width:600px) {
+        .fancybox-slide--ajax .products-detail {
+            max-height : 90%;
+        }
     }
 </style>
