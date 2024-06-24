@@ -1,0 +1,28 @@
+.box_quickview {
+    position: absolute;
+    text-align: center;
+    z-index: 9;
+    opacity: 0;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+.product-slider-horizontal .list-item-product .item .product{
+    position: relative;
+}
+.fancybox-slide--ajax .products-detail {
+    max-width  : 1200px;
+    max-height : 90%;
+    margin: auto;
+}
+.fancybox-slide--ajax .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+@media(max-width:600px) {
+    .fancybox-slide--ajax .products-detail {
+        max-height : 90%;
+    }
+}

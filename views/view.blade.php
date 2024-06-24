@@ -1,10 +1,10 @@
 <div class="products-detail">
     <div class="row">
         <div class="col-md-7" id="surround">
-            <?php do_action('product_detail_slider', $object);?>
+            @do_action('product_detail_slider', $object)
         </div>
         <div class="col-md-5">
-            <?php do_action('product_detail_info', $object); ?>
+            @do_action('product_detail_info', $object)
         </div>
     </div>
 </div>

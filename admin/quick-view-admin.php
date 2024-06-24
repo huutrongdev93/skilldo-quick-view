@@ -1,17 +1,38 @@
 <?php
-if(!function_exists('admin_quick_view_settings_tabs')) {
-    function admin_quick_view_settings_tabs( $tabs ) {
-        $tabs['quick_view'] 	= array( 'label' => 'Quick view', 	'callback' => 'admin_page_quick_view_settings');
+class AdminQuickViewSystem {
+
+    static function register($tabs)
+    {
+        $tabs['quick-view'] = [
+            'label'         => trans('quickview.title'),
+            'group'         => 'commerce',
+            'description'   => trans('quickview.system.description'),
+            'callback'      => 'AdminQuickViewSystem::render',
+            'icon'          => '<i class="fa-duotone fa-telescope"></i>',
+            'form'          => false
+        ];
+
         return $tabs;
     }
-    add_filter( 'admin_product_settings_tabs', 'admin_quick_view_settings_tabs' );
-}
 
-if(!function_exists('admin_page_quick_view_settings')) {
-    function admin_page_quick_view_settings($ci, $tab) {
-        include_once 'views/html-settings.php';
+    static function render(): void
+    {
+        $active = QuickViewHelper::styleActive();
+
+        $styles = QuickViewHelper::style();
+
+        Plugin::view(QV_NAME, 'admin/views/setting', [
+            'title'       => trans('quickview.title'),
+            'description' => trans('quickview.system.description'),
+            'styles'      => $styles,
+            'active'      => $active
+        ]);
+
+        Plugin::view(QV_NAME, 'admin/views/script');
     }
 }
+
+add_filter('skd_system_tab', 'AdminQuickViewSystem::register', 50);
 
 if(!function_exists('admin_quick_view_ajax_object_save')) {
 

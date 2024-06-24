@@ -1,0 +1,27 @@
+.box_quickview_style_1 {
+  bottom: -25px;
+  left: 5px;
+  width: calc(100% - 10px);
+  display: flex;
+}
+.box_quickview_style_1 a {
+  flex: 1 1 0px;
+  display: block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  transition: all 0.5s;
+  background-color: var(--quick-view-bg-color, var(--theme-color));
+  color: var(--quick-view-txt-color, #fff);
+}
+.box_quickview_style_1 a:last-child {
+  margin-right: 0;
+}
+.product-slider-horizontal .item .box_quickview_style_1 a:hover {
+  background-color: var(--quick-view-bg-color-hover);
+  color: var(--quick-view-txt-color-hover);
+}
+.product-slider-horizontal .item:hover .box_quickview_style_1 {
+  opacity: 1;
+  bottom: 5px;
+}
+/*# sourceMappingURL=style.css.map */
