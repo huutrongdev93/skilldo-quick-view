@@ -1,0 +1,8 @@
+{
+    "name":"Quick View - Xem Nhanh",
+    "class":"quick_view",
+    "url":"https://sikido.vn",
+    "description":"Plugin cho khách hàng xem nhanh thông tin sản phẩm.",
+    "author":"Nguyễn Hữu Trọng",
+    "version":"2.0.0"
+}

@@ -1,12 +1,4 @@
 <?php
-/**
-Plugin name     : Quick View - Xem Nhanh
-Plugin class    : quick_view
-Plugin uri      : http://sikido.vn
-Description     : Plugin cho khách hàng xem nhanh thông tin sản phẩm.
-Author          : Nguyễn Hữu Trọng
-Version         : 2.0.0
- */
 const QV_NAME = 'quick-view';
 
 define('QV_PATH', Path::plugin(QV_NAME));
