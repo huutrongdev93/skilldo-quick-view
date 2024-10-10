@@ -9,7 +9,7 @@
                 }
             });
             $.fancybox.open({
-                src  : base + '/ajax?action=QuickViewRender&id=' + pid,
+                src  : ajax + '?action=QuickViewRender&id=' + pid,
                 type : 'ajax',
                 opts : {
 					touch: false,
