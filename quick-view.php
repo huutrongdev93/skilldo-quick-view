@@ -89,4 +89,4 @@ function QuickViewRender(\SkillDo\Http\Request $request, $model ): void
         ]);
     }
 }
-Ajax::client('QuickViewRender');
+Ajax::client('QuickViewRender', 'get');
